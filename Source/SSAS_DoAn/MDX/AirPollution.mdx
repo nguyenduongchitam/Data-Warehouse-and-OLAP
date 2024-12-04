@@ -1,0 +1,104 @@
+﻿--Câu 1. Cho biết tổng lượng Pm25 ở thành phố Pado-Ri theo từng năm.
+SELECT 
+  NON EMPTY [Measures].[Pm2 5] ON COLUMNS, 
+  NON EMPTY [Dim Date].[Year].[Year].MEMBERS * [Dim Location].[City].&[Pado-Ri] ON ROWS
+FROM [DW Air Pollution]
+--Câu 2. Cho biết vùng có chỉ số o3 cao nhất vào tháng 6 năm 2017.
+SELECT 
+NON EMPTY {[Measures].[o3]} ON COLUMNS, 
+NON EMPTY {TOPCOUNT([Dim Location].[Country].[Country],1,[Measures].[o3]) * [Dim Date].[Month Fix].&[201706]} ON ROWS
+FROM [DW Air Pollution]
+--Câu 3. Cho biết thành phố nào có tổng lượng Pm10 trên 50000.
+SELECT [Measures].[Pm10] ON COLUMNS,
+NON EMPTY {[Dim Location].[City].[City].MEMBERS}
+HAVING [Measures].[Pm10] > 50000 ON ROWS
+FROM [DW Air Pollution]
+--Câu 4. Cho biết top 5 quận có chỉ số So2 cao nhất trong tất cả các năm.
+SELECT 
+NON EMPTY {[Measures].[So2]} ON COLUMNS,
+{topcount([Dim Location].[District].[District], 5, [Measures].[So2])} ON ROWS
+FROM [DW Air Pollution]
+--Câu 5. Cho biết ngày nào có tổng lượng NO2 cao nhất.
+SELECT [Measures].[NO2] ON COLUMNS,
+topcount([Dim Date].[Day Fix].[Day Fix],1,[Measures].[NO2]) ON ROWS      
+FROM [DW Air Pollution]
+--Câu 6. Cho biết tổng lượng CO ở vùng Deajeon theo từng năm.
+SELECT 
+     NON EMPTY [Measures].[CO] ON COLUMNS,
+  NON EMPTY{[Dim Location].[Country].&[Daejeon] * [Dim Date].[Year].[Year] }ON ROWS
+	 FROM [DW Air Pollution]
+--Câu 7. Đưa ra 3 tháng có tổng lượng Pm25 ít nhất trong năm 2018 tại thành phố Paju.
+SELECT  
+  [Measures].[PM2 5]  ON COLUMNS, 
+  [Dim Location].[City].&[Paju] * BottomCount(
+ NonEmpty([Dim Date].[Month Fix].[Month Fix],[Measures].[PM2 5]),3,[Measures].[PM2 5])
+    ON ROWS
+FROM [DW Air Pollution]
+WHERE [Dim Date].[Year].&[2018]
+--Câu 8. Cho biết 3 thành phố có lượng khí Pm10 nhiều nhất trong năm 2017.
+SELECT 
+NON EMPTY {[Measures].[Pm10]} ON COLUMNS,
+NON EMPTY {TOPCOUNT([Dim Location].[City].CHILDREN,3,[Measures].[Pm10])} ON ROWS
+FROM [DW Air Pollution]
+WHERE ([Dim Date].[Year].&[2017])
+--Câu 9.Với từng vùng liệt kê lượng khí So2 theo từng năm, trừ Gwangju và Gyeonggi.
+SELECT [Measures].[SO2] ON COLUMNS,
+NON EMPTY {EXCEPT([Dim Location].[Country].CHILDREN,{[Dim Location].[Country].&[Gwangju],[Dim Location].[Country].&[Gyeonggi]}) * [Dim Date].[Year].[Year]} ON ROWS
+FROM  [DW Air Pollution]
+--Câu 10.Cho biết thành phố có tổng lượng o3 cao nhất và thành phố có tổng lượng o3 thấp nhất. 
+WITH 
+  SET [TopCity] AS 
+    TOPCOUNT(NONEMPTY([Dim Location].[City].[City].MEMBERS, [Measures].[O3]), 1, [Measures].[O3])
+  SET [BottomCity] AS 
+    BOTTOMCOUNT(NONEMPTY([Dim Location].[City].[City].MEMBERS, [Measures].[O3]), 1, [Measures].[O3])
+SELECT 
+  {[Measures].[O3]} ON COLUMNS, 
+  UNION([TopCity], [BottomCity]) ON ROWS
+FROM [DW Air Pollution]
+ --Câu 11. Với mỗi quận đưa ra 3 ngày có tổng lượng CO cao nhất.
+ SELECT 
+    NON EMPTY [Measures].[CO] ON COLUMNS,
+    NON EMPTY 
+    GENERATE(
+        [Dim Location].[District].Children,
+        TOPCOUNT(
+            [Dim Location].[District].CurrentMember * [Dim Date].[Day Fix].Children,
+            3,
+            [Measures].[CO]
+        )
+    ) ON ROWS
+FROM [DW Air Pollution]       
+--Câu 12. Liệt kê những thành phố có tổng lượng o3 từ 10000 đến 20000.
+SELECT [Measures].[o3] ON COLUMNS,
+    NON EMPTY 
+        FILTER(
+            {[Dim Location].[City].[City].MEMBERS}, 
+            [Measures].[o3] >= 10000 AND [Measures].[o3] <= 20000
+       ) ON ROWS
+FROM [DW Air Pollution]
+--Câu 13. Đưa ra 7 ngày có lượng Pm10 cao nhất tại quận Jeonbuk.
+SELECT 
+    [Measures].[Pm10] ON COLUMNS,
+    TopCount(
+        NonEmpty(
+            [Dim Date].[Day Fix].Children,
+            ([Dim Location].[District].&[Jeonbuk], [Measures].[Pm10])
+        ), 
+        7, 
+        [Measures].[Pm10]
+    ) ON ROWS
+FROM [DW Air Pollution]
+WHERE [Dim Location].[District].&[Jeonbuk]
+--Câu 14. Liệt kê tổng lượng So2 của tất cả các vùng theo từng năm
+SELECT [Measures].[So2] ON COLUMNS,
+NON EMPTY 
+        [Dim Location].[Country].Children * [Dim Date].[Year].[Year].Members ON ROWS
+FROM [DW Air Pollution]
+--Câu 15. Liệt kê những năm có tổng lượng Pm25 từ 20000-100000.
+SELECT [Measures].[Pm2 5] ON COLUMNS,
+    NON EMPTY 
+        FILTER(
+            {[Dim Date].[Year].[Year].MEMBERS}, 
+            [Measures].[Pm2 5] >= 20000 AND [Measures].[Pm2 5] <= 200000
+       ) ON ROWS
+FROM [DW Air Pollution]

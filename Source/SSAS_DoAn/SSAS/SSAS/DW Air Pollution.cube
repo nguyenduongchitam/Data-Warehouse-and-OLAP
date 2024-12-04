@@ -1,0 +1,366 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="54779527-be24-40ef-ae9f-76ef37b627d2" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DW Air Pollution</ID>
+  <Name>DW Air Pollution</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="12" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3347" scrolltop="-1245" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="15198" y="12615" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_Location" left="-806" top="6019" logicalid="6" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000003090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Dim_Location" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_Date" left="6056" top="836" logicalid="7" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000003090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Dim_Date" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Fact_Pollution" left="20" top="0" logicalid="8" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="4106" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00000a100000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Fact_Pollution" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="120" top="3806" logicalid="9" controlid="4" masterid="0" hint1="0" hint2="0" width="974" height="2713" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_LOCATION]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="3" sourceattachpoint="4" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="694" y="6019" />
+              <point x="694" y="5063" />
+              <point x="420" y="5063" />
+              <point x="420" y="4106" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2720" top="1590" logicalid="10" controlid="5" masterid="0" hint1="0" hint2="0" width="3636" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_DATE]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="3" sourceattachpoint="12" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6056" y="1989" />
+              <point x="4220" y="1989" />
+              <point x="4220" y="2053" />
+              <point x="3020" y="2053" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-3347</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-1245</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-806</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="808476e7-3286-4096-ae31-2db33c522e7e">
+      <ID>Dim Date</ID>
+      <Name>Dim Date</Name>
+      <DimensionID>Dim Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9cafc101-7a5c-4683-9715-4e9138c52871">
+          <AttributeID>ID Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4392d636-fb91-4d65-b96c-dd7d0f0b5571">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1f7d927a-772e-4fe6-bb9f-f1344b3016cd">
+          <AttributeID>Day Fix</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="36adeefa-2910-4556-9b0d-190521e0a8d7">
+          <AttributeID>Month Fix</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="0fd45043-3713-4b78-9371-bb4d593e6f70">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="cdd3079e-2b80-47fd-ad85-88dceb2dc842">
+      <ID>Dim Location</ID>
+      <Name>Dim Location</Name>
+      <DimensionID>Dim Location</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="8521e03b-968f-430f-b355-c53adee2f285">
+          <AttributeID>ID Location</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="564f19e4-f3ba-49d7-92d7-894df628c95f">
+          <AttributeID>City</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dab5e8a2-d9d9-4ef5-9cbf-1603d4f62acc">
+          <AttributeID>District</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cceb31b1-ced3-4c49-a81d-6641eef64d1a">
+          <AttributeID>Country</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="b9ec846f-bb39-43a4-b272-b916607b29cd">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="5f20eb8d-e9aa-4f49-ade0-836ff7b7dea9">
+      <ID>Fact Pollution</ID>
+      <Name>Fact Pollution</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="9de846e5-feeb-4845-8437-56f41a87b21d">
+          <ID>PM2 5</ID>
+          <Name>PM2 5</Name>
+          <Source dwd:design-time-name="de6aaafa-bca1-4844-96cd-c3b48b884b71">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="74e67625-7f3a-48de-adc7-4bd8a4942747">
+              <TableID>dbo_Fact_Pollution</TableID>
+              <ColumnID>PM2_5</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="16d80ccc-5aa2-4500-9d2f-d3a0ed850845">
+          <ID>PM10</ID>
+          <Name>PM10</Name>
+          <Source dwd:design-time-name="21c84b33-2750-4c18-a7b1-3d4fdf4b6c6e">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b81b95f8-7fde-465a-8ca1-abd35e06ef2d">
+              <TableID>dbo_Fact_Pollution</TableID>
+              <ColumnID>PM10</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="273a2ae9-6fe1-47e3-a837-663362f8bfe1">
+          <ID>O3</ID>
+          <Name>O3</Name>
+          <Source dwd:design-time-name="23587c34-d549-4fce-98f2-53988f5339c4">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="be71d570-430f-46b8-aba5-195cc1746fab">
+              <TableID>dbo_Fact_Pollution</TableID>
+              <ColumnID>O3</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="4ef7e582-ae59-4ac5-97f9-cfb3546381c6">
+          <ID>NO2</ID>
+          <Name>NO2</Name>
+          <Source dwd:design-time-name="fc01f04e-db1b-46b7-94d2-99dd41e1de8f">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="255c1342-3308-4b83-b399-da0b737f9145">
+              <TableID>dbo_Fact_Pollution</TableID>
+              <ColumnID>NO2</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="bb1090eb-50b5-411f-a505-898a4d13a0d3">
+          <ID>SO2</ID>
+          <Name>SO2</Name>
+          <Source dwd:design-time-name="c74c4f3c-052f-4809-9c00-3b98ef119794">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2afacad5-de61-4d3f-bdbb-c420c4a8f8a5">
+              <TableID>dbo_Fact_Pollution</TableID>
+              <ColumnID>SO2</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3548275e-ad1d-4449-aa18-e509afd67655">
+          <ID>CO</ID>
+          <Name>CO</Name>
+          <Source dwd:design-time-name="07491574-bb5c-4d36-ba1a-1bbc707db1b5">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5e55b3d5-778d-4267-a7f3-f57729455475">
+              <TableID>dbo_Fact_Pollution</TableID>
+              <ColumnID>CO</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0149dcb7-e631-41d8-bde3-39fd9d393909">
+          <CubeDimensionID>Dim Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b8b081ec-9ea0-4356-85c5-b1f7215db35b">
+              <AttributeID>ID Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8c358e35-f876-4eb2-8cca-eb8dce5585c8">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c40f67d7-cdfd-450c-a802-208a3efbb7c1">
+                    <TableID>dbo_Fact_Pollution</TableID>
+                    <ColumnID>ID_Date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f90a5bbc-9486-45c0-be50-c8cb0cb366bc">
+          <CubeDimensionID>Dim Location</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="34c8ee84-88ac-4df9-aeb5-bcfc70dd7c08">
+              <AttributeID>ID Location</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="af213cf7-b900-459d-aaaf-350dc68c41cf">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d04a8f9e-299c-4041-a00e-ad3329b69655">
+                    <TableID>dbo_Fact_Pollution</TableID>
+                    <ColumnID>ID_Location</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="99ecdd66-fb33-484a-a828-9231457ad189">
+    <DataSourceViewID>DW Air Pollution</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="1d46dda0-aaf1-4db1-90a5-66afe3ed58ab">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+The CALCULATE command controls the aggregation of leaf cells in the cube.
+If the CALCULATE command is deleted or modified, the data within the cube is affected.
+You should edit this command only if you manually specify how the cube is aggregated.
+*/
+CALCULATE;  
+CREATE DYNAMIC SET CURRENTCUBE.[NgaycochisoNo2caonhat]
+ AS TOPCOUNT([Dim Date].[Day Fix].[Day Fix],1,[Measures].[No2]); 
+CREATE DYNAMIC SET CURRENTCUBE.[Tong luong O3 tu 10000-20000]
+ AS FILTER ([Dim Location].[City].CHILDREN,[Measures].[O3]&gt;=10000 AND [Measures].[O3]&lt;=20000) ;   
+CREATE DYNAMIC SET CURRENTCUBE.[TongLuong03CaoNhat]
+ AS TOPCOUNT([Dim Location].[Country].[Country],1,[Measures].[o3]); 
+CREATE DYNAMIC SET CURRENTCUBE.[Top 7 ngay]
+ AS Topcount( 
+                   NonEmpty( 
+                   [Dim Date].[Day Fix].Children, [Measures].[Pm10]
+           )
+           ,7 
+           ,[Measures].[Pm10]
+) ; 
+CREATE DYNAMIC SET CURRENTCUBE.[Tong luong Pm25 từ 20000-200000]
+ AS Filter([Dim Date].[Year].Children, [Measures].[Pm2 5] &gt;=20000 AND [Measures].[Pm2 5] &lt;=200000 ) ; 
+CREATE DYNAMIC SET CURRENTCUBE.[Duara3ngaycotongluongCOcaonhat]
+ AS TOPCOUNT(
+        [Dim Location].[District].CurrentMember * [Dim Date].[Day Fix].Children,
+        3,
+        [Measures].[CO]
+    ) ;   
+CREATE DYNAMIC SET CURRENTCUBE.[TongLuongPm10&gt;50000]
+ AS FILTER([Dim Location].[City].[City],[Measures].[PM10] &gt; 50000);   
+CREATE DYNAMIC SET CURRENTCUBE.[TOP5quancoluongSO2caonhat]
+ AS TOPCOUNT([Dim Location].[District].[District],5,[Measures].[So2]);   
+CREATE DYNAMIC SET CURRENTCUBE.[BOTTOM 3 THANG]
+ AS {BottomCount(
+            NonEmpty(
+                  [Dim Date].[Month Fix].[Month Fix]
+                  ,[Measures].[Pm2 5]
+            )
+            ,3
+            ,[Measures].[Pm2 5]
+        )};  
+CREATE DYNAMIC SET CURRENTCUBE.[Tru Gwangju va Gyeonggi]
+ AS EXCEPT([Dim Location].[Country].CHILDREN,{[Dim Location].[Country].&amp;[Gwangju],[Dim Location].[Country].&amp;[Gyeonggi]});  
+CREATE DYNAMIC SET CURRENTCUBE.[TopthanhphovaBottomthanhphotongluongO3]
+ AS UNION(TOPCOUNT(NONEMPTY([Dim Location].[City].[City].MEMBERS, [Measures].[O3]), 1, [Measures].[O3]),BOTTOMCOUNT(NONEMPTY([Dim Location].[City].[City].MEMBERS, [Measures].[O3]), 1, [Measures].[O3]));   
+CREATE DYNAMIC SET CURRENTCUBE.[TOP 3 THANH PHO]
+ AS TOPCOUNT([Dim Location].[City].CHILDREN,3,[Measures].[Pm10]); </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+</Cube>
